@@ -62,7 +62,7 @@ const Register = () => {
 
         <ButtonContainer width={80} height={32} lgWidth={67.5} lgHeight={40.1}>
           <StyledButton
-            onClick={() => history.push("/login")}
+            onClick={() => history.push("/")}
             height={32}
             lgHeight={40.1}
             background="#212529"
