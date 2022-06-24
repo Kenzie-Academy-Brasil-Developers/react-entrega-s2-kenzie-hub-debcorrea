@@ -59,27 +59,27 @@ const Login = () => {
             width={264.66}
             lgWidth={330}
           >
-            <InputContainer height={38.5} lgHeight={48}>
+            <InputContainer height={38.5} lgHeight={48} error={!!errors.email}>
               <label htmlFor="email">
-                Email {errors.email && `- ${errors.email.message}`}
+                Email {errors.email && <span>- {errors.email.message}</span>}
               </label>
 
               <input
                 id="email"
-                placeholder="Digite seu email"
+                placeholder="Digite aqui seu email"
                 {...register("email")}
               />
             </InputContainer>
 
-            <InputContainer height={38.5} lgHeight={48}>
+            <InputContainer height={38.5} lgHeight={48} error={!!errors.password}>
               <label htmlFor="password">
-                Senha {errors.password && `- ${errors.password.message}`}
+                Senha {errors.password && <span>- {errors.password.message}</span>}
               </label>
 
               <input
                 id="password"
                 type="password"
-                placeholder="Digite sua senha"
+                placeholder="Digite aqui sua senha"
                 {...register("password")}
               />
             </InputContainer>
