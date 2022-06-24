@@ -97,9 +97,9 @@ const Register = () => {
             width={263.8}
             lgWidth={329.3}
           >
-            <InputContainer height={38.4} lgHeight={48}>
+            <InputContainer height={38.4} lgHeight={48} error={!!errors.email}>
               <label htmlFor="name">
-                Nome {errors.name && `- ${errors.name.message}`}
+                Nome {errors.name && <span>- {errors.name.message}</span>}
               </label>
 
               <input
@@ -109,9 +109,9 @@ const Register = () => {
               />
             </InputContainer>
 
-            <InputContainer height={38.4} lgHeight={48}>
+            <InputContainer height={38.4} lgHeight={48} error={!!errors.email}>
               <label htmlFor="email">
-                Email {errors.email && `- ${errors.email.message}`}
+                Email {errors.email && <span>- {errors.email.message}</span>}
               </label>
 
               <input
@@ -121,9 +121,9 @@ const Register = () => {
               />
             </InputContainer>
 
-            <InputContainer height={38.4} lgHeight={48}>
+            <InputContainer height={38.4} lgHeight={48} error={!!errors.email}>
               <label htmlFor="password">
-                Senha {errors.password && `- ${errors.password.message}`}
+                Senha {errors.password && <span>- {errors.password.message}</span>}
               </label>
 
               <input
@@ -134,11 +134,11 @@ const Register = () => {
               />
             </InputContainer>
 
-            <InputContainer height={38.4} lgHeight={48}>
+            <InputContainer height={38.4} lgHeight={48} error={!!errors.email}>
               <label htmlFor="confirmPassword">
                 Confirmar senha{" "}
                 {errors.confirmPassword &&
-                  `- ${errors.confirmPassword.message}`}
+                  <span>- {errors.confirmPassword.message}</span>}
               </label>
 
               <input
@@ -149,9 +149,9 @@ const Register = () => {
               />
             </InputContainer>
 
-            <InputContainer height={38.4} lgHeight={48}>
+            <InputContainer height={38.4} lgHeight={48} error={!!errors.email}>
               <label htmlFor="bio">
-                Bio {errors.bio && `- ${errors.bio.message}`}
+                Bio {errors.bio && <span>- {errors.bio.message}</span>}
               </label>
 
               <input
@@ -161,9 +161,9 @@ const Register = () => {
               />
             </InputContainer>
 
-            <InputContainer height={38.4} lgHeight={48}>
+            <InputContainer height={38.4} lgHeight={48} error={!!errors.email}>
               <label htmlFor="contact">
-                Contato {errors.contact && `- ${errors.contact.message}`}
+                Contato {errors.contact && <span>- {errors.contact.message}</span>}
               </label>
 
               <input
