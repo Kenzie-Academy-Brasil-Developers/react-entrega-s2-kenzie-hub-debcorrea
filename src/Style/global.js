@@ -31,7 +31,6 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     vertical-align: baseline;
   }
 
@@ -51,7 +50,11 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const StyledHeader = styled.header`
+  width: ${(props) => `${props.ctWidth}px`};
+
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   img {
     width: ${(props) => `${props.width}px`};
@@ -59,10 +62,22 @@ export const StyledHeader = styled.header`
   }
 
   @media (min-width: 425px) {
+    width: ${(props) => `${props.lgCtWidth}px`};
+
     img {
       width: ${(props) => `${props.lgWidth}px`};
       height: ${(props) => `${props.lgHeight}px`};
     }
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  width: ${(props) => `${props.width}px`};
+  height: ${(props) => `${props.height}px`};
+
+  @media (min-width: 425px) {
+    width: ${(props) => `${props.lgWidth}px`};
+    height: ${(props) => `${props.lgHeight}px`};
   }
 `;
 
@@ -82,9 +97,6 @@ export const StyledContainer = styled.div`
 
   box-shadow: 0px 3.20867px 32.0867px -8.02168px rgba(0, 0, 0, 0.25);
 
-  overflow: ${(props) => props.overflow};
-  scrollbar-width: none;
-
   @media (min-width: 425px) {
     width: ${(props) => `${props.lgWidth}px`};
 
@@ -95,15 +107,15 @@ export const StyledContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: ${(props) => props.size};
+  font-size: ${(props) => `${props.size}px`};
   font-weight: 700;
   color: #f8f9fa;
 
-  width: ${(props) => props.width};
+  width: ${(props) => `${props.width}px`};
 
   @media (min-width: 425px) {
-    font-size: ${(props) => props.lgSize};
+    font-size: ${(props) => `${props.lgSize}px`};
 
-    width: ${(props) => props.lgWidth};
+    width: ${(props) => `${props.lgWidth}px`};
   }
 `;
