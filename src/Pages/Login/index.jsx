@@ -6,11 +6,13 @@ import {
   StyledButton,
   StyledForm,
 } from "../../Components/Form/style";
+import api from "../../Services/api";
 
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const history = useHistory();
@@ -30,7 +32,18 @@ const Login = () => {
   } = useForm({ resolver: yupResolver(schema) });
 
   const login = (user) => {
-    console.log(user);
+    api
+      .post("/sessions", user)
+      .then((res) => {
+        localStorage.clear();
+        localStorage.setItem("kenzieHubToken", res.data.token);
+        localStorage.setItem("kenzieHubId", res.data.user.id);
+
+        toast.success("Login feito com sucesso!");
+        
+        return history.push("/dashboard");
+      })
+      .catch(() => toast.error("Opa! Algo deu errado"));
   };
 
   return (
@@ -71,9 +84,14 @@ const Login = () => {
               />
             </InputContainer>
 
-            <InputContainer height={38.5} lgHeight={48} error={!!errors.password}>
+            <InputContainer
+              height={38.5}
+              lgHeight={48}
+              error={!!errors.password}
+            >
               <label htmlFor="password">
-                Senha {errors.password && <span>- {errors.password.message}</span>}
+                Senha{" "}
+                {errors.password && <span>- {errors.password.message}</span>}
               </label>
 
               <input

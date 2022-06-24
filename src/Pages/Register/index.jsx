@@ -16,6 +16,8 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useHistory } from "react-router-dom";
+import api from "../../Services/api";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const history = useHistory();
@@ -33,7 +35,7 @@ const Register = () => {
       .oneOf([yup.ref("password")], "Senhas diferentes"),
     bio: yup.string().required("Campo obrigatório"),
     contact: yup.string().required("Campo obrigatório"),
-    module: yup.string(),
+    course_module: yup.string(),
   });
 
   const {
@@ -42,10 +44,25 @@ const Register = () => {
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
-  const login = ({ name, email, password, bio, contact, module }) => {
-    const user = { name, email, password, bio, contact, module };
-    
+  const login = ({ name, email, password, bio, contact, course_module }) => {
+    const user = { name, email, password, bio, contact, course_module };
+
     console.log(user);
+
+    api
+      .post("/users", user)
+      .then(() => {
+        toast.success("Conta criada com sucesso");
+
+        return history.push("/");
+      })
+      .catch((err) => {
+        if (err.response.data.message === "Email already exists") {
+          toast.error("Email já existente");
+        } else {
+          toast.error("Opa! Algo deu errado");
+        }
+      });
   };
 
   return (
@@ -125,7 +142,8 @@ const Register = () => {
 
             <InputContainer height={38.4} lgHeight={48} error={!!errors.email}>
               <label htmlFor="password">
-                Senha {errors.password && <span>- {errors.password.message}</span>}
+                Senha{" "}
+                {errors.password && <span>- {errors.password.message}</span>}
               </label>
 
               <input
@@ -139,8 +157,9 @@ const Register = () => {
             <InputContainer height={38.4} lgHeight={48} error={!!errors.email}>
               <label htmlFor="confirmPassword">
                 Confirmar senha{" "}
-                {errors.confirmPassword &&
-                  <span>- {errors.confirmPassword.message}</span>}
+                {errors.confirmPassword && (
+                  <span>- {errors.confirmPassword.message}</span>
+                )}
               </label>
 
               <input
@@ -165,7 +184,8 @@ const Register = () => {
 
             <InputContainer height={38.4} lgHeight={48} error={!!errors.email}>
               <label htmlFor="contact">
-                Contato {errors.contact && <span>- {errors.contact.message}</span>}
+                Contato{" "}
+                {errors.contact && <span>- {errors.contact.message}</span>}
               </label>
 
               <input
@@ -176,9 +196,9 @@ const Register = () => {
             </InputContainer>
 
             <InputContainer height={38.4} lgHeight={48}>
-              <label htmlFor="module">Módulo</label>
+              <label htmlFor="course_module">Módulo</label>
 
-              <select id="module" {...register("module")}>
+              <select id="course_module" {...register("course_module")}>
                 <option value="Primeiro módulo (Introdução ao Frontend)">
                   Primeiro módulo
                 </option>
