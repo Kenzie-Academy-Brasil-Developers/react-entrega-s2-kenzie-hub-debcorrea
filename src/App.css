@@ -5,7 +5,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 19.4px;
+
+  padding: 58px 0;
 
   background-color: #121214;
+}
+
+@media (min-width: 425px) {
+  .App {
+    gap: 35.7px;
+  }
 }
