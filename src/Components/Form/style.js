@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 export const StyledForm = styled.form`
   width: ${(props) => `${props.width}px`};
@@ -25,9 +25,14 @@ export const InputContainer = styled.div`
     font-size: 10px;
     font-weight: 400;
     color: #f8f9fa;
+
+    span {
+      color: #e83f5b;
+    }
   }
 
-  input, select {
+  input,
+  select {
     height: ${(props) => `${props.height}px`};
 
     color: #f8f9fa;
@@ -45,6 +50,11 @@ export const InputContainer = styled.div`
     &:focus {
       border: #f8f9fa;
     }
+
+    ${(props) => !!props.error && css`
+      border-color: #e83f5b;
+    `}
+
   }
 
   @media (min-width: 425px) {
@@ -54,7 +64,8 @@ export const InputContainer = styled.div`
       font-size: 12.18px;
     }
 
-    input, select {
+    input,
+    select {
       height: ${(props) => `${props.lgHeight}px`};
 
       padding-left: 16.24px;
