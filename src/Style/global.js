@@ -56,6 +56,8 @@ export const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
 
+  margin-bottom: ${(props) => `${props.margin}px`};
+
   img {
     width: ${(props) => `${props.width}px`};
     height: ${(props) => `${props.height}px`};
@@ -63,6 +65,8 @@ export const StyledHeader = styled.header`
 
   @media (min-width: 425px) {
     width: ${(props) => `${props.lgCtWidth}px`};
+
+    margin-bottom: ${(props) => `${props.lgMargin}px`};
 
     img {
       width: ${(props) => `${props.lgWidth}px`};

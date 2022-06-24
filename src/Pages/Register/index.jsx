@@ -57,6 +57,8 @@ const Register = () => {
         lgHeight={20}
         ctWidth={296}
         lgCtWidth={370}
+        margin={19.3}
+        lgMargin={12.9}
       >
         <img src={Logo} alt="Logo da Kenzie Hub em rosa" />
 
