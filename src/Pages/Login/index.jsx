@@ -101,7 +101,7 @@ const Login = () => {
             <span>Ainda não possui uma conta?</span>
 
             <StyledButton
-              onClick={() => history.push("/")}
+              onClick={() => history.push("/register")}
               height={38.5}
               lgHeight={48}
               background="#868e96"

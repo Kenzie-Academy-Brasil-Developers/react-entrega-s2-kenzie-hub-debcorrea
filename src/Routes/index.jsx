@@ -7,11 +7,11 @@ const Routes = () => {
   return (
     <Switch>
       <Route exact path="/">
-        <Register />
+        <Login />
       </Route>
 
-      <Route path="/login">
-        <Login />
+      <Route path="/register">
+        <Register />
       </Route>
     </Switch>
   );
