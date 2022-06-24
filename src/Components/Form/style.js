@@ -27,7 +27,7 @@ export const InputContainer = styled.div`
     color: #f8f9fa;
   }
 
-  input {
+  input, select {
     height: ${(props) => `${props.height}px`};
 
     color: #f8f9fa;
@@ -54,7 +54,7 @@ export const InputContainer = styled.div`
       font-size: 12.18px;
     }
 
-    input {
+    input, select {
       height: ${(props) => `${props.lgHeight}px`};
 
       padding-left: 16.24px;
@@ -108,5 +108,15 @@ export const BottomContainer = styled.div`
     span {
       font-size: 12px;
     }
+  }
+`;
+
+export const StyledSpan = styled.span`
+  font-size: 9.6px;
+  font-weight: 400;
+  color: #868e96;
+
+  @media (min-width: 425px) {
+    font-size: 12px;
   }
 `;
