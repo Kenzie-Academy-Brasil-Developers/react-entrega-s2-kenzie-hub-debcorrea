@@ -125,28 +125,27 @@ export const Title = styled.h1`
 `;
 
 export const StyledNav = styled.nav`
-  width: ${(props) => `${props.ctWidth}px`};
+  width: 296px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  margin-bottom: ${(props) => `${props.margin}px`};
+  margin-bottom: 13px;
 
   img {
-    width: ${(props) => `${props.width}px`};
-    height: ${(props) => `${props.height}px`};
+    width: 105.5px;
+    height: 14.6px;
   }
 
-  @media (min-width: 425px) {
-    width: ${(props) => `${props.lgCtWidth}px`};
+  @media (min-width: 768px) {
+    width: 570px;
 
-    margin-bottom: ${(props) => `${props.lgMargin}px`};
+    margin-bottom: 9px;
+  }
 
-    img {
-      width: ${(props) => `${props.lgWidth}px`};
-      height: ${(props) => `${props.lgHeight}px`};
-    }
+  @media (min-width: 1024px) {
+    width: 780px;
   }
 `;
 
@@ -182,8 +181,36 @@ export const Divisor = styled.div`
     }
   }
 
+  @media (min-width: 375px) {
+    div {
+      margin-left: 38px;
+    }
+  }
+
   @media (min-width: 425px) {
+    div {
+      margin-left: 62px;
+    }
+  }
+
+  @media (min-width: 768px) {
     height: 118px;
+
+    div {
+      margin-left: 100px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    div {
+      margin-left: 122px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    div {
+      margin-left: 330px;
+    }
   }
 `;
 
@@ -213,6 +240,14 @@ export const GeneralContainer = styled.div`
     align-items: center;
     justify-content: center;
   }
+
+  @media (min-width: 768px) {
+    width: 570px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 780px;
+  }
 `;
 
 export const TechContainer = styled.div`
@@ -230,14 +265,18 @@ export const TechContainer = styled.div`
   margin-top: 21px;
 
   ul {
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     gap: 16px;
+  }
 
-    p {
-      font-size: 14px;
-      font-weight: 500;
-      color: #f8f9fa;
-    }
+  @media (min-width: 768px) {
+    width: 570px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 780px;
   }
 `;
