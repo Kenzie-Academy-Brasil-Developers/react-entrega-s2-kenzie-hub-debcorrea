@@ -123,3 +123,121 @@ export const Title = styled.h1`
     width: ${(props) => `${props.lgWidth}px`};
   }
 `;
+
+export const StyledNav = styled.nav`
+  width: ${(props) => `${props.ctWidth}px`};
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: ${(props) => `${props.margin}px`};
+
+  img {
+    width: ${(props) => `${props.width}px`};
+    height: ${(props) => `${props.height}px`};
+  }
+
+  @media (min-width: 425px) {
+    width: ${(props) => `${props.lgCtWidth}px`};
+
+    margin-bottom: ${(props) => `${props.lgMargin}px`};
+
+    img {
+      width: ${(props) => `${props.lgWidth}px`};
+      height: ${(props) => `${props.lgHeight}px`};
+    }
+  }
+`;
+
+export const Divisor = styled.div`
+  width: 100vw;
+  height: 131px;
+
+  border-top: 1px solid #212529;
+  border-bottom: 1px solid #212529;
+
+  display: flex;
+  align-items: center;
+
+  div {
+    width: 296px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    margin-left: 12px;
+
+    h1 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #f8f9fa;
+    }
+
+    p {
+      font-size: 12px;
+      font-weight: 400;
+      color: #868e96;
+    }
+  }
+
+  @media (min-width: 425px) {
+    height: 118px;
+  }
+`;
+
+export const GeneralContainer = styled.div`
+  width: 296px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #f8f9fa;
+  }
+
+  button {
+    width: 32.5px;
+    height: 32px;
+
+    border: none;
+    border-radius: 4px;
+
+    background-color: #212529;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+export const TechContainer = styled.div`
+  width: 296px;
+
+  background-color: #212529;
+
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 22px;
+  margin-top: 21px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      color: #f8f9fa;
+    }
+  }
+`;
