@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Card = styled.li`
-  width: 279px;
+  width: 100%;
   height: 48.7px;
 
   background-color: #121214;
@@ -24,5 +24,9 @@ export const Card = styled.li`
     font-size: 12.2px;
     font-weight: 400;
     color: #868e96;
+  }
+
+  @media (min-width: 768px) {
+    height: 49px;
   }
 `;

@@ -28,14 +28,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <StyledNav
-        width={105.5}
-        height={14.6}
-        ctWidth={296}
-        // lgCtWidth={780}
-        margin={13}
-        lgMargin={9}
-      >
+      <StyledNav>
         <img src={Logo} alt="Logo da Kenzie Hub em rosa" />
 
         <ButtonContainer width={55.5} height={32}>
