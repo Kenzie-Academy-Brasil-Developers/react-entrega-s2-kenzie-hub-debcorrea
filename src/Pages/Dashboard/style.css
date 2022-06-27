@@ -1,0 +1,43 @@
+.Modal {
+  width: 296px;
+
+  background-color: #212529;
+
+  color: #f8f9fa;
+
+  position: absolute;
+  top: 230px;
+  left: 10px;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.top {
+  height: 40.1px;
+
+  background-color: #343b41;
+
+  font-size: 11.2px;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 16px;
+}
+
+.top > button {
+  background-color: inherit;
+  border: none;
+}
+
+.bottom {
+  padding: 19.6px 17.65px;
+}
