@@ -158,6 +158,7 @@ export const Divisor = styled.div`
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
   div {
     width: 296px;
@@ -165,8 +166,6 @@ export const Divisor = styled.div`
     display: flex;
     flex-direction: column;
     gap: 15px;
-
-    margin-left: 12px;
 
     h1 {
       font-size: 18px;
@@ -181,35 +180,22 @@ export const Divisor = styled.div`
     }
   }
 
-  @media (min-width: 375px) {
-    div {
-      margin-left: 38px;
-    }
-  }
-
-  @media (min-width: 425px) {
-    div {
-      margin-left: 62px;
-    }
-  }
-
   @media (min-width: 768px) {
     height: 118px;
 
     div {
-      margin-left: 100px;
+      width: 570px;
+
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
     }
+
   }
 
   @media (min-width: 1024px) {
     div {
-      margin-left: 122px;
-    }
-  }
-
-  @media (min-width: 1440px) {
-    div {
-      margin-left: 330px;
+      width: 780px;
     }
   }
 `;
