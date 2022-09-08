@@ -14,6 +14,8 @@ export const Card = styled.li`
 
   border-radius: 4px;
 
+  cursor: pointer;
+
   h3 {
     font-size: 14.2px;
     font-weight: 700;

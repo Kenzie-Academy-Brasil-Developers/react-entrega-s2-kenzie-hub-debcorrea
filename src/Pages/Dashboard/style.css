@@ -6,7 +6,7 @@
   color: #f8f9fa;
 
   position: absolute;
-  top: 230px;
+  top: 190px;
   left: 10px;
 }
 
@@ -40,6 +40,31 @@
 
 .bottom {
   padding: 19.6px 17.65px;
+}
+
+.btnContainer {
+  width: 264.66px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 375px) {
+  .Modal {
+    width: 369px;
+
+    left: 38px;
+  }
+}
+
+@media (min-width: 425px) {
+  .bottom {
+    padding: 24.46px 22px;
+  }
+
+  .btnContainer {
+    width: 330px;
+  }
 }
 
 @media (min-width: 375px) {

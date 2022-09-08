@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledForm = styled.form`
   width: ${(props) => `${props.width}px`};
@@ -51,10 +51,11 @@ export const InputContainer = styled.div`
       border: #f8f9fa;
     }
 
-    ${(props) => !!props.error && css`
-      border-color: #e83f5b;
-    `}
-
+    ${(props) =>
+      !!props.error &&
+      css`
+        border-color: #e83f5b;
+      `}
   }
 
   @media (min-width: 425px) {
@@ -66,6 +67,7 @@ export const InputContainer = styled.div`
 
     input,
     select {
+      width: ${(props) => `${props.width}px`};
       height: ${(props) => `${props.lgHeight}px`};
 
       padding-left: 16.24px;
@@ -74,7 +76,7 @@ export const InputContainer = styled.div`
 `;
 
 export const StyledButton = styled.button`
-  width: 100%;
+  width: ${(props) => (props.width ? `${props.width}px` : "100%")};
   height: ${(props) => `${props.height}px`};
 
   background-color: ${(props) => props.background};
@@ -87,6 +89,7 @@ export const StyledButton = styled.button`
   border-radius: 4.06px;
 
   @media (min-width: 425px) {
+    width: ${(props) => (props.lgWidth ? `${props.lgWidth}px` : "100%")};
     height: ${(props) => `${props.lgHeight}px`};
 
     font-size: ${(props) => `${props.lgSize}px`};
