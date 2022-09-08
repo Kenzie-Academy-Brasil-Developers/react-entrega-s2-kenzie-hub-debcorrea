@@ -134,7 +134,6 @@ const Dashboard = () => {
             <div className="bottom">
               <StyledForm
                 width={264.66}
-                lgWidth={369}
                 onSubmit={handleSubmit(onSubmit)}
               >
                 <InputContainer height={38.5} lgHeight={48}>

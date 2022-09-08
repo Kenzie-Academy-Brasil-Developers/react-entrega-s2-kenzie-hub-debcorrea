@@ -47,8 +47,6 @@ const Register = () => {
   const login = ({ name, email, password, bio, contact, course_module }) => {
     const user = { name, email, password, bio, contact, course_module };
 
-    console.log(user);
-
     api
       .post("/users", user)
       .then(() => {

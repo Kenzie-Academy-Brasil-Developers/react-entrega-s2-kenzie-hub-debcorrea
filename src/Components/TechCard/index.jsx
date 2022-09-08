@@ -91,12 +91,8 @@ const TechCard = ({ tech }) => {
         </div>
 
         <div className="bottom">
-          <StyledForm
-            width={264.66}
-            lgWidth={329.9}
-            onSubmit={handleSubmit(onSubmit)}
-          >
-            <InputContainer height={38.5} lgHeight={48} width={329.9}>
+          <StyledForm width={264.66} onSubmit={handleSubmit(onSubmit)}>
+            <InputContainer height={38.5} lgHeight={48}>
               <label htmlFor="title">Nome do projeto</label>
 
               <input
@@ -123,7 +119,6 @@ const TechCard = ({ tech }) => {
               <StyledButton
                 type="submit"
                 width={163.09}
-                lgWidth={204}
                 height={38.3}
                 lgHeight={48}
                 background="#59323f"
@@ -136,8 +131,8 @@ const TechCard = ({ tech }) => {
 
               <StyledButton
                 onClick={() => deleteTech()}
+                type="button"
                 width={78.35}
-                lgWidth={98}
                 height={38.5}
                 lgHeight={48}
                 background="#868e96"
