@@ -41,3 +41,35 @@
 .bottom {
   padding: 19.6px 17.65px;
 }
+
+@media (min-width: 375px) {
+  .Modal {
+    left: 40px;
+  }
+}
+
+@media (min-width: 425px) {
+  .Modal {
+    width: 296px;
+
+    left: 65px;
+  }
+}
+
+@media (min-width: 768px) {
+  .Modal {
+    left: 220px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Modal {
+    left: 360px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .Modal {
+    left: 550px;
+  }
+}
